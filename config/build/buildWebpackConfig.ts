@@ -1,4 +1,4 @@
-import webpack from 'webpack'
+import webpack from 'webpack';
 
 import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
@@ -22,4 +22,4 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
         },
         resolve: buildResolvers()
     }
-}
+};
