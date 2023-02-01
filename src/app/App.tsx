@@ -17,10 +17,16 @@ export const App = () => {
             <Link to={'/about'}>О нас</Link>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path='/about' element={<AboutPage/>}/>
-                    <Route path='/' element={<MainPage/>}/>
+                    <Route
+                        path='/about'
+                        element={<AboutPage />}
+                    />
+                    <Route
+                        path='/'
+                        element={<MainPage />}
+                    />
                 </Routes>
             </Suspense>
         </div>
-    )
-}
+    );
+};
