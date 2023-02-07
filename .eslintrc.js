@@ -38,7 +38,8 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'comma-dangle': 'off',
-        'i18next/no-literal-string': 'off'
+        'i18next/no-literal-string': 'off',
+        'max-len': ['error', { 'ignoreComments': true }]
         // ['error', { markupOnly: true, ignoreProperty: true }]
     },
     globals: {
