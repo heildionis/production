@@ -1,5 +1,5 @@
 .eslintrc.js
-.babel.config.js
+babel.config.js
 lint-staged.config.js
 node_modules
 .vs
