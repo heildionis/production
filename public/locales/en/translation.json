@@ -3,5 +3,7 @@
   "Перевод": "Translate",
   "MainPage": "Main page",
   "Язык": "English",
-  "NotFound": "Page not found"
+  "NotFound": "Page not found",
+  "Unhappend Error": "An unexpected error has occurred",
+  "Update page": "Update page"
 }
