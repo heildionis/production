@@ -42,7 +42,8 @@ module.exports = {
         'i18next/no-literal-string': 'off',
         'max-len': ['error', { 'code': 100, 'ignoreComments': true }],
         // ['error', { markupOnly: true, ignoreProperty: true }],
-        'linebreak-style': 'off'
+        'linebreak-style': 'off',
+        'react/jsx-no-useless-fragment': 'off'
     },
     globals: {
         __IS_DEV__: true,
