@@ -1,5 +1,5 @@
-.eslintrc.js
-babel.config.js
+# .eslintrc.js
+# babel.config.js
 lint-staged.config.js
 node_modules
 .vs
@@ -7,5 +7,5 @@ node_modules
 .idea
 .git
 .next
-webpack.config.js
+# webpack.config.js
 # jest.config.ts
