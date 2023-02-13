@@ -16,17 +16,24 @@ export default ({ config }: { config: webpack.Configuration }): webpack.Configur
     config.resolve?.modules?.push(paths.src);
     config.resolve?.extensions?.push('.ts', '.tsx');
 
-    if (config.module?.rules) {
-        let { rules } = config.module;
+    // let { rules } = config.module!;
 
-        rules = rules.map((rule: webpack.RuleSetRule | '...') => {
-            if (rule !== '...' && /svg/.test(rule.test as string)) {
-                return { ...rule, exclude: /\.svg$/i };
-            }
+    // rules = rules!.map((rule: webpack.RuleSetRule | '...') => {
+    //     if (rule !== '...' && /svg/.test(rule.test as string)) {
+    //         return { ...rule, exclude: /\.svg$/i };
+    //     }
 
-            return rule;
-        });
-    }
+    //     return rule;
+    // });
+
+    // eslint-disable-next-line no-param-reassign
+    config.module!.rules = config.module!.rules!.map((rule: any) => {
+        if (/svg/.test(rule.test as string)) {
+            return { ...rule, exclude: /\.svg$/i };
+        }
+
+        return rule;
+    });
 
     config.module?.rules?.push(buildSvgLoader());
     config.module?.rules?.push(buildCssLoader(true));
