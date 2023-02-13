@@ -18,9 +18,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install modules
+      - name: Installing modules💡
         run: npm install
-      - name: Build production project🖥️
+      - name: Building production project🖥️
         run: npm run build:prod
       - name: Linting typescript🔎
         run: npm run lint:ts
@@ -28,3 +28,7 @@ jobs:
         run: npm run lint:scss
       - name: Unit testing🐧
         run: npm run test:unit
+      - name: Building storybook🖥️
+        run: npm run storybook:build
+      - name: Screenshot testing🐧
+        run: npm run test:ui:ci
