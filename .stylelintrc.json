@@ -4,6 +4,6 @@
         "indentation": [4],
         "selector-class-pattern": null,
         "no-missing-end-of-source-newline":null,
-        "block-no-empty":true
+        "block-no-empty": null
     }
 }
