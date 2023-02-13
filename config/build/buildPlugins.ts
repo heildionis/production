@@ -19,5 +19,5 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }),
     new ReactRefreshWebpackPlugin({ overlay: false }),
     new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({ openAnalyzer: false })
+    new BundleAnalyzerPlugin({ openAnalyzer: false }),
 ];

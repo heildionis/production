@@ -34,9 +34,9 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
         },
     };
 
-    const svgLoader =   buildSvgLoader();
+    const svgLoader = buildSvgLoader();
 
-    const cssLoader = buildCssLoader(isDev)
+    const cssLoader = buildCssLoader(isDev);
 
     const typescriptLoader = {
         test: /\.tsx?$/,
