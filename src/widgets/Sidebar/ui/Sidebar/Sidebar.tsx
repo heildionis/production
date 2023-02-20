@@ -3,7 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
-    AppLink, Button, LangSwitcher, ThemeSwitcher,
+    AppLink,
+    Button,
+    LangSwitcher,
+    ThemeSwitcher,
 } from 'shared/ui';
 import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import AboutIcon from 'shared/assets/icons/list.svg';
