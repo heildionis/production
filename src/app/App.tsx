@@ -5,11 +5,11 @@ import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
 
-export const App = () => {
-    const { theme } = useTheme();
+export const App = (props: any) => {
+    const { any } = props;
 
     return (
-        <div className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {})}>
             <Suspense fallback=''>
                 <Navbar />
                 <div className='content-page'>
