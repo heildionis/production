@@ -49,7 +49,7 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'font'],
             },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'max-len': ['error', { ignoreComments: true, code: 110 }],
         'jsx-quotes': ['error', 'prefer-single'],
         'react/jsx-no-useless-fragment': 'off',
         'no-param-reassign': 'off',
