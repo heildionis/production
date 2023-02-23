@@ -1,8 +1,11 @@
 {
   "MainPage": "MainPage",
   "NotFound": "NotFound",
+  "Test": "Test",
   "Unhappend Error": "Unhappend Error",
   "Update page": "Update page",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
   "Войти": "Войти",
   "Главная": "",
   "Главная страница": "",
