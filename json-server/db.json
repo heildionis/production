@@ -8,20 +8,29 @@
     "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
     "users": [
         {
-            "id": 1,
+            "id": "1",
             "username": "admin",
             "password": "root"
         },
         {
-            "id": 2,
+            "id": "2",
             "username": "adm",
             "password": "123"
         },
         {
-            "id": 3,
+            "id": "3",
             "username": "admin",
             "password": "123"
         }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { 
+        "first": "Denis",
+        "lastname": "Sarzhan",
+        "age": 18,
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Kaluga",
+        "username": "admin",
+        "avatar": "https://static.vecteezy.com/system/resources/previews/002/363/105/original/developer-icon-free-vector.jpg"
+    }
 }
