@@ -1,5 +1,5 @@
 ---
-# Frontend Advanced Production
+# Frontend Blog
 ---
 ## Приложение на React.js с полной настройком инфраструктуры. От webpack до CI/CD, husky. 
 ---
