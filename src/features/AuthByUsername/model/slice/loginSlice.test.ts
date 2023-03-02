@@ -1,6 +1,5 @@
 import { loginActions, loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { LoginSchema } from 'features/AuthByUsername';
-import { DeepPartial } from '@reduxjs/toolkit';
 
 describe('loginSlice.test', () => {
     test('test set username', () => {
