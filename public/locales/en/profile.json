@@ -1,7 +1,17 @@
 {
-    "Страница профиля": "Profile page",
-    "Профиль": "Profile",
-    "Редактировать": "Edit",
-    "Ваше имя": "Your name",
-    "Ваша фамилия": "Your lastname"
+  "Страница профиля": "Profile page",
+  "Профиль": "Profile",
+  "Редактировать": "Edit",
+  "Ваше имя": "Your name",
+  "Ваша фамилия": "Your lastname",
+  "Попробуйте обновить страницу": "Try to reload the page",
+  "Произошла ошибка при загрузке профиля": "An error occurred while loading the profile",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
+  "Валюта": "Currency",
+  "Город": "City",
+  "Ваш возраст": "Your age",
+  "Имя пользователя": "Username",
+  "Аватар": "Avatar",
+  "Укажите валюту": "Select currency"
 }
