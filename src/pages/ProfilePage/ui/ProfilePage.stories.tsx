@@ -1,9 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
+import { mockedProfileData } from 'entities/Profile';
 import ProfilePage from './ProfilePage';
 
 export default {
@@ -17,11 +16,22 @@ export default {
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Normal = Template.bind({});
+Normal.args = {};
+Normal.decorators = [StoreDecorator({
+    profile: {
+        form: {
+            ...mockedProfileData,
+        },
+    },
+})];
 
-export const Light = Template.bind({});
-Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [StoreDecorator({
+    profile: {
+        form: {
+            ...mockedProfileData,
+        },
+    },
+})];
