@@ -42,5 +42,5 @@ export interface Article {
     views: number;
     createdAt: string;
     type: ArticleType[];
-    block: ArticleBlock[];
+    blocks: ArticleBlock[];
 }

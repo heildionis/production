@@ -8,6 +8,7 @@ const initialState: ArticleDetailsSchema = {
     error: undefined,
     data: undefined,
 };
+// TODO: write for slice tests
 
 export const articleDetailsSlice = createSlice({
     name: 'articleDetails',
