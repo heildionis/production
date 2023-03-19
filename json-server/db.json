@@ -119,13 +119,15 @@
       "id": "1",
       "username": "admin",
       "password": "root",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://w7.pngwing.com/pngs/145/451/png-transparent-computer-icons-user-profile-avatar.png"      
     },
     {
       "id": "2",
       "username": "adm",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://egevpare.ru/wp-content/uploads/2022/04/Things-You-Should-Consider-When-Investing-In-The-BSC-Software-1.jpg"
     },
     {
       "id": "3",
