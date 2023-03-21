@@ -12,10 +12,8 @@ React-приложение с полной настройкой окружени
 - React
 - Redux Toolkit
 - Axios
-- i18next
 ---
 Технологии для разработки:
-- Webpack
 - TypeScript
 - ESLint/Stylelint
 ---
@@ -25,7 +23,8 @@ React-приложение с полной настройкой окружени
 - Loki
 ---
 Доп. технологии:
-- Github Actions(CI/CD)
+- Webpack
+- Github Actions(CI)
 - husky
 - json-server
 - babel
