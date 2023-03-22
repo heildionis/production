@@ -25,3 +25,18 @@ Normal.args = {
 Normal.decorators = [
     StoreDecorator({}),
 ];
+
+export const Loading = Template.bind({});
+Loading.args = {
+    isLoading: true,
+    comment: {
+        id: '1',
+        text: 'hello world',
+        user: { id: '1', username: 'Vasya' },
+    },
+
+};
+
+Loading.decorators = [
+    StoreDecorator({}),
+];

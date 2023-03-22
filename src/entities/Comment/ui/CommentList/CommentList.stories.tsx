@@ -17,8 +17,13 @@ Normal.args = {
     comments: [
         {
             id: '1',
-            text: 'hello world',
+            text: 'hello',
             user: { id: '1', username: 'Vasya' },
+        },
+        {
+            id: '2',
+            text: 'world',
+            user: { id: '2', username: 'Petya' },
         },
     ],
 };
@@ -26,3 +31,9 @@ Normal.args = {
 Normal.decorators = [
     StoreDecorator({}),
 ];
+
+export const Loading = Template.bind({});
+Loading.args = {
+    isLoading: true,
+    comments: [],
+};
