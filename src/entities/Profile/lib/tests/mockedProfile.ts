@@ -11,4 +11,5 @@ export const mockedProfileData = {
     country: Country.Ukraine,
     currency: Currency.RUB,
     avatar,
+    id: '1',
 };

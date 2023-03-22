@@ -9,4 +9,5 @@ export const mockedProfileJest = {
     username: 'neospectrum',
     country: Country.Ukraine,
     currency: Currency.RUB,
+    id: '1',
 };
