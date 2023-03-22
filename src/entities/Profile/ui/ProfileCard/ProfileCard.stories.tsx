@@ -1,6 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { mockedProfileData } from 'entities/Profile/lib/tests/mockedProfile';
+import { Currency } from 'entities/Currency';
+import { Country } from 'entities/Country';
 import { ProfileCard } from './ProfileCard';
 
 export default {
@@ -15,7 +17,14 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...
 
 export const Primary = Template.bind({});
 Primary.args = {
-    data: { ...mockedProfileData },
+    data: { first: 'Denis',
+        lastname: 'Sarzhan',
+        age: 18,
+        city: 'Donetsk',
+        username: 'neospectrum',
+        country: Country.Ukraine,
+        currency: Currency.RUB,
+        id: '1' },
 };
 
 export const withError = Template.bind({});

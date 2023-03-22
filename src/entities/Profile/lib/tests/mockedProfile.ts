@@ -10,6 +10,5 @@ export const mockedProfileData = {
     username: 'neospectrum',
     country: Country.Ukraine,
     currency: Currency.RUB,
-    avatar,
     id: '1',
 };
