@@ -1,6 +1,6 @@
 import { ArticleDetails, getArticleDetailsData } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
-import { FC, memo } from 'react';
+import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -12,6 +12,7 @@ import {
 import { Text } from 'shared/ui';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/addCommentForm';
 import {
     fetchCommentsByArticleId,
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -26,6 +27,7 @@ import {
     getArticleComments,
 } from '../../model/slices/articleDetailsCommentSlice';
 import cls from './ArticleDetailsPage.module.scss';
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 
 interface ArticleDetailsPageProps {
    className?: string;
@@ -44,6 +46,10 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = memo((props: ArticleDeta
     const comments = useSelector(getArticleComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
     const commentsError = useSelector(getArticleCommentsError);
+
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
@@ -64,6 +70,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = memo((props: ArticleDeta
                 {article && (
                     <>
                         <Text title={t('Комментарии')} />
+                        <AddCommentForm onSendComment={onSendComment} />
                         <CommentList
                             isLoading={commentsIsLoading}
                             comments={comments}
