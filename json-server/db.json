@@ -112,6 +112,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "123",
+      "id": "hYFc3cQ"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "23112313",
+      "id": "Qr_Guf4"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asd",
+      "id": "bXpJUP1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdasd",
+      "id": "kXM0oWK"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdas",
+      "id": "WNsCq6o"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "привет",
+      "id": "-9gu1Bk"
     }
   ],
   "users": [
@@ -120,7 +156,7 @@
       "username": "admin",
       "password": "root",
       "role": "ADMIN",
-      "avatar": "https://w7.pngwing.com/pngs/145/451/png-transparent-computer-icons-user-profile-avatar.png"      
+      "avatar": "https://w7.pngwing.com/pngs/145/451/png-transparent-computer-icons-user-profile-avatar.png"
     },
     {
       "id": "2",
@@ -136,14 +172,28 @@
       "role": "USER"
     }
   ],
-  "profile": {
-    "first": "Denis",
-    "lastname": "Sarzhan",
-    "age": 18,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Kaluga",
-    "username": "admin",
-    "avatar": "https://w7.pngwing.com/pngs/145/451/png-transparent-computer-icons-user-profile-avatar.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Denis",
+      "lastname": "Sarzhan",
+      "age": 18,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Kaluga",
+      "username": "admin",
+      "avatar": "https://w7.pngwing.com/pngs/145/451/png-transparent-computer-icons-user-profile-avatar.png"
+    },
+    {
+      "id": "2",
+      "first": "Dansa",
+      "lastname": "Sa",
+      "age": 24,
+      "currency": "RUB",
+      "country": "Ukraine",
+      "city": "Donetsk",
+      "username": "administrator",
+      "avatar": "https://egevpare.ru/wp-content/uploads/2022/04/Things-You-Should-Consider-When-Investing-In-The-BSC-Software-1.jpg"
+    }
+  ]
 }
