@@ -4,7 +4,7 @@ export enum Theme {
     LIGHT = 'app_light_theme',
     DARK = 'app_dark_theme',
     ORANGE = 'app_orange_theme',
-    RED = 'app_red_theme'
+    // RED = 'app_red_theme'
 }
 
 export interface ThemeContextProps {
