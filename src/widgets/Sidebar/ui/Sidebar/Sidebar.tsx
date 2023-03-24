@@ -14,7 +14,6 @@ import cls from './Sidebar.module.scss';
 interface SidebarProps {
     className?: string
 }
-
 export const Sidebar: FC<SidebarProps> = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
     const sidebarItemsList = useSelector(getSidebarItems);
