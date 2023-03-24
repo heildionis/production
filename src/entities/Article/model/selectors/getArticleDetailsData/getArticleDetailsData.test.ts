@@ -12,6 +12,11 @@ describe('getArticleDetailsData.test', () => {
             views: 1022,
             createdAt: '26.02.2022',
             type: [ArticleType.IT],
+            user: {
+                id: '1',
+                username: 'Denis Sarzhan',
+                avatar: 'https://w7.pngwing.com/pngs/145/451/png-transparent-computer-icons-user-profile-avatar.png',
+            },
             blocks: [
                 {
                     id: 1,
