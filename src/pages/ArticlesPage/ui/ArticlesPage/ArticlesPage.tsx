@@ -1,3 +1,4 @@
+import { ArticleList, ArticleView } from 'entities/Article';
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -13,7 +14,11 @@ const ArticlesPage: FC<ArticlesPageProps> = memo((props: ArticlesPageProps) => {
 
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            {t('Статьи')}
+            <ArticleList
+                isLoading
+                view={ArticleView.BIG}
+                articles={[]}
+            />
         </div>
     );
 });
