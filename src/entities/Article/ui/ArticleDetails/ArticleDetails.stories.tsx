@@ -11,6 +11,10 @@ const article: Article = {
     views: 1022,
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
+    user: {
+        id: '1',
+        username: 'Denis Sarzhan',
+    },
     blocks: [
         {
             id: 1,
@@ -74,7 +78,7 @@ const article: Article = {
 };
 
 export default {
-    title: 'entities/Article',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
         backgroundColor: { control: 'color' },
