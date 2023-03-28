@@ -1,5 +1,4 @@
 import { FC, memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -34,7 +33,6 @@ export const ArticleList: FC<ArticleListProps> = memo((props: ArticleListProps) 
         view = ArticleView.SMALL,
         isLoading,
     } = props;
-    const { t } = useTranslation();
 
     if (isLoading) {
         return (

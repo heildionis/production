@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar, Button, Card, Icon, Text } from 'shared/ui';
 import EyeIcon from 'shared/assets/icons/eye.svg';
-import { useHover } from 'shared/lib/hooks/useHover/useHover';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
