@@ -41,14 +41,14 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'font', 'name'],
+                ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'font', 'name', 'target'],
             },
         ],
         'max-len': [
             'error',
             {
                 ignoreComments: true,
-                code: 110,
+                code: 130,
             },
         ],
         'jsx-quotes': ['error', 'prefer-single'],
