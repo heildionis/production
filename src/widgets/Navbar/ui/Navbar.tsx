@@ -4,8 +4,10 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui';
+import { AppLink, Button } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -33,6 +35,18 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
+                <Text
+                    theme={TextTheme.INVERTED}
+                    className={cls.appName}
+                    title={t('Blog App')}
+                />
+                <AppLink
+                    theme='secondary'
+                    to={RoutePath.article_create}
+                    className={cls.createBtn}
+                >
+                    {t('Создать статью')}
+                </AppLink>
                 <Button
                     className={cls.links}
                     theme={ButtonTheme.CLEAR_INVERTED}
