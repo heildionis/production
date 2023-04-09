@@ -13,7 +13,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'heildionis-plugin'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -41,7 +41,21 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'font', 'name', 'target'],
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'as',
+                    'theme',
+                    'size',
+                    'font',
+                    'name',
+                    'target',
+                    'direction',
+                    'align',
+                    'justify',
+                    'gap',
+                    'role',
+                ],
             },
         ],
         'max-len': [
@@ -60,6 +74,7 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error',
         'no-undef': 'off',
+        'heildionis-plugin/path-checker': 2,
     },
     globals: {
         __IS_DEV__: true,
