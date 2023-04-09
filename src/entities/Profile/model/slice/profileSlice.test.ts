@@ -1,4 +1,4 @@
-import { mockedProfileJest } from 'entities/Profile/lib/tests/mockedProfileJest';
+import { mockedProfileJest } from '../../lib/tests/mockedProfileJest';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ProfileSchema, ValidateProfileError } from '../types/profile';
 import { profileActions, profileReducer } from './profileSlice';
