@@ -1,5 +1,5 @@
-import { loginActions, loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
-import { LoginSchema } from 'features/AuthByUsername';
+import { loginActions, loginReducer } from '../../model/slice/loginSlice';
+import { LoginSchema } from '../types/loginSchema';
 
 describe('loginSlice.test', () => {
     test('test set username', () => {
@@ -7,7 +7,9 @@ describe('loginSlice.test', () => {
         expect(loginReducer(
             state as LoginSchema,
             loginActions.setUsername('username'),
-        )).toEqual({ username: 'username' });
+        )).toEqual({
+            username: 'username',
+        });
     });
 
     test('test set password', () => {
@@ -15,6 +17,8 @@ describe('loginSlice.test', () => {
         expect(loginReducer(
             state as LoginSchema,
             loginActions.setPassword('password'),
-        )).toEqual({ password: 'password' });
+        )).toEqual({
+            password: 'password',
+        });
     });
 });
