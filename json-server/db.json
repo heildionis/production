@@ -613,6 +613,24 @@
       "userId": "1",
       "text": "sad",
       "id": "Mv_xIOt"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "comment",
+      "id": "DNCcQ1I"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "comment",
+      "id": "-6siHtR"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "ASD",
+      "id": "dAzZTkA"
     }
   ],
   "users": [
@@ -636,8 +654,8 @@
       "id": "1",
       "first": "jghwer",
       "lastname": "asfewr",
-      "age": 465,
-      "currency": "EUR",
+      "age": 12,
+      "currency": "USD",
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
