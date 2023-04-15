@@ -37,6 +37,7 @@ const options = {
 
 describe('features/EditableProfileCard', () => {
     beforeEach(() => {
+        // @ts-ignore
         componentRender(<EditableProfileCard id='1' />, options);
     });
     test('Переключение режимов с readonly', async () => {
