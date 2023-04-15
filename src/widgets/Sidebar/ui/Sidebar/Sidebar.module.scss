@@ -19,6 +19,7 @@
     position: absolute;
     right: -40px;
     bottom: 32px;
+    z-index: var(--sidebar-collapse-index);
 }
 
 .items {
