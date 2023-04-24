@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { mockedProfileJest } from 'entities/Profile';
 import { updateProfileData } from './updateProfileData';
-import { ValidateProfileError } from '../../types/editableProfileCardSchema';
+import { ValidateProfileError } from '../../constants/constants';
 
 const data = { ...mockedProfileJest };
 

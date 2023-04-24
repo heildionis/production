@@ -1,7 +1,8 @@
 import { mockedProfileJest } from 'entities/Profile';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
-import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema';
+import { ProfileSchema } from '../types/editableProfileCardSchema';
 import { profileActions, profileReducer } from './profileSlice';
+import { ValidateProfileError } from '../constants/constants';
 
 const data = { ...mockedProfileJest };
 

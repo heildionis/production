@@ -1,6 +1,6 @@
 import { mockedProfileJest } from 'entities/Profile';
-import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 import { validateProfileData } from './validateProfileData';
+import { ValidateProfileError } from '../../constants/constants';
 
 const data = { ...mockedProfileJest };
 
