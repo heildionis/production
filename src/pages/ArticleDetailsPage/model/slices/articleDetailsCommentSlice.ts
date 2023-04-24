@@ -1,10 +1,10 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import {
     createEntityAdapter,
     createSlice,
     PayloadAction,
 } from '@reduxjs/toolkit';
-import { Comment } from 'entities/Comment';
+import { Comment } from '@/entities/Comment';
 import { ArticleDetailsCommentSchema } from '../types/AritcleDeatilsCommentSchema';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 

@@ -1,10 +1,12 @@
 import { FC, Fragment, ReactNode, memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Listbox as HeadlessListbox } from '@headlessui/react';
-import { DropdownDirection } from 'shared/types/ui';
+import { DropdownDirection } from '@/shared/types/ui';
 import cls from './Listbox.module.scss';
-import { Button } from '../Button/Button';
-import { HStack } from '../Stack';
+import { Button } from '../../../Button/Button';
+import { HStack } from '../../../Stack';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 
 export interface ListBoItem {
     value: string;
@@ -23,13 +25,6 @@ interface ListBoxProps {
     label?: string;
 }
 
-const mapDirection: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top left': cls.optionsTopLeft,
-    'top right': cls.optionsTopRight,
-};
-
 export const Listbox: FC<ListBoxProps> = memo((props: ListBoxProps) => {
     const {
         className,
@@ -42,7 +37,7 @@ export const Listbox: FC<ListBoxProps> = memo((props: ListBoxProps) => {
         label,
     } = props;
 
-    const optionClasses = [mapDirection[direction]];
+    const optionClasses = [mapDirectionClass[direction]];
 
     return (
         <HStack gap='4'>
@@ -50,7 +45,7 @@ export const Listbox: FC<ListBoxProps> = memo((props: ListBoxProps) => {
             <HeadlessListbox
                 disabled={readonly}
                 as='div'
-                className={classNames(cls.Listbox, {}, [className])}
+                className={classNames(cls.Listbox, {}, [className, popupCls.popup])}
                 value={value}
                 onChange={onChange}
             >
@@ -70,8 +65,8 @@ export const Listbox: FC<ListBoxProps> = memo((props: ListBoxProps) => {
                             {({ active, selected }) => (
                                 <li
                                     className={classNames(cls.item, {
-                                        [cls.active]: active,
-                                        [cls.disabled]: item.disabled,
+                                        [popupCls.active]: active,
+                                        [popupCls.disabled]: item.disabled,
                                     })}
                                 >
                                     {item.content}

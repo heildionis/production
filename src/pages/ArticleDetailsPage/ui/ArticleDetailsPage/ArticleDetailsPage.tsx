@@ -1,22 +1,22 @@
-import { ArticleDetails, getArticleDetailsData } from 'entities/Article';
-import { CommentList } from 'entities/Comment';
+import { ArticleDetails, getArticleDetailsData } from '@/entities/Article';
+import { CommentList } from '@/entities/Comment';
 import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Text } from 'shared/ui';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { AddCommentForm } from 'features/addCommentForm';
-import { Page } from 'widgets/Page/Page';
-import { TextSize } from 'shared/ui/Text/Text';
-import { VStack } from 'shared/ui/Stack';
-import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { Text } from '@/shared/ui';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from '@/features/addCommentForm';
+import { Page } from '@/widgets/Page/Page';
+import { TextSize } from '@/shared/ui/Text/Text';
+import { VStack } from '@/shared/ui/Stack';
+import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { articleDetailsPageReducer } from '../../model/slices';
 import {
     fetchCommentsByArticleId,

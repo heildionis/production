@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import { mockedProfileData } from 'entities/Profile';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import { mockedProfileData } from '@/entities/Profile';
 import ProfilePage from './ProfilePage';
 
 export default {

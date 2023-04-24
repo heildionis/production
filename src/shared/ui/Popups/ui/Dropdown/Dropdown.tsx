@@ -1,9 +1,11 @@
 import { FC, Fragment, ReactNode, memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Menu } from '@headlessui/react';
-import { DropdownDirection } from 'shared/types/ui';
+import { DropdownDirection } from '@/shared/types/ui';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../AppLink/AppLink';
+import { AppLink } from '../../../AppLink/AppLink';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -11,13 +13,6 @@ export interface DropdownItem {
     onClick?: () => void;
     href?: string
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top left': cls.optionsTopLeft,
-    'top right': cls.optionsTopRight,
-};
 
 interface DropdownProps {
     className?: string;
@@ -37,13 +32,13 @@ export const Dropdown: FC<DropdownProps> = memo((props: DropdownProps) => {
     const menuClasses = [mapDirectionClass[direction]];
 
     return (
-        <Menu as='div' className={classNames(cls.Dropdown, {}, [className])}>
-            <Menu.Button className={cls.btn}>{trigger}</Menu.Button>
+        <Menu as='div' className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
+            <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
                 {items.map((item) => {
                     const content = ({ active }: { active: boolean }) => (
                         <button
-                            className={classNames(cls.item, { [cls.active]: active })}
+                            className={classNames(cls.item, { [popupCls.active]: active })}
                             onClick={item?.onClick}
                             type='button'
                         >
