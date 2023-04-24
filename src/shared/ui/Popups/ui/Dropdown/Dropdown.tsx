@@ -1,6 +1,6 @@
 import { FC, Fragment, ReactNode, memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { Menu } from '@headlessui/react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
 import cls from './Dropdown.module.scss';
 import { AppLink } from '../../../AppLink/AppLink';
@@ -35,7 +35,7 @@ export const Dropdown: FC<DropdownProps> = memo((props: DropdownProps) => {
         <Menu as='div' className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
             <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
-                {items.map((item) => {
+                {items.map((item, index) => {
                     const content = ({ active }: { active: boolean }) => (
                         <button
                             className={classNames(cls.item, { [popupCls.active]: active })}
@@ -48,14 +48,23 @@ export const Dropdown: FC<DropdownProps> = memo((props: DropdownProps) => {
 
                     if (item.href) {
                         return (
-                            <Menu.Item as={AppLink} to={item.href} disabled={item?.disabled}>
+                            <Menu.Item
+                                as={AppLink}
+                                to={item.href}
+                                disabled={item?.disabled}
+                                key={index}
+                            >
                                 {content}
                             </Menu.Item>
                         );
                     }
 
                     return (
-                        <Menu.Item as={Fragment} disabled={item?.disabled}>
+                        <Menu.Item
+                            as={Fragment}
+                            disabled={item?.disabled}
+                            key={index}
+                        >
                             {content}
                         </Menu.Item>
                     );

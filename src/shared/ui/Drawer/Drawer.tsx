@@ -106,16 +106,8 @@ const DrawerAsync = (props: DrawerProps) => {
     return <DrawerContent {...props} />;
 };
 
-export const Drawer = (props: DrawerProps) => {
-    const { isLoaded } = useAnimationLibs();
-
-    if (!isLoaded) {
-        return null;
-    }
-
-    return (
-        <AnimationProvider>
-            <DrawerAsync {...props} />
-        </AnimationProvider>
-    );
-};
+export const Drawer = (props: DrawerProps) => (
+    <AnimationProvider>
+        <DrawerAsync {...props} />
+    </AnimationProvider>
+);
