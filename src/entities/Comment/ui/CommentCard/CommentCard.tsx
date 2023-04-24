@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     AppLink, Avatar, Skeleton, Text,
-} from 'shared/ui';
-import { VStack } from 'shared/ui/Stack';
+} from '@/shared/ui';
+import { VStack } from '@/shared/ui/Stack';
 import { Comment } from '../../model/types/comment';
 
 import cls from './CommentCard.module.scss';

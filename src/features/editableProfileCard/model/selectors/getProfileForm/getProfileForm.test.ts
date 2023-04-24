@@ -1,5 +1,5 @@
-import { StateSchema } from 'app/providers/StoreProvider';
-import { mockedProfileJest } from 'entities/Profile';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { mockedProfileJest } from '@/entities/Profile';
 import { getProfileForm } from './getProfileForm';
 
 describe('getProfileForm.test', () => {

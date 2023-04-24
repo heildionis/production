@@ -1,4 +1,4 @@
-import { mockedProfileJest } from 'entities/Profile';
+import { mockedProfileJest } from '@/entities/Profile';
 import { validateProfileData } from './validateProfileData';
 import { ValidateProfileError } from '../../constants/constants';
 

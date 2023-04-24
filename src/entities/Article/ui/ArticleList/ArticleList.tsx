@@ -1,8 +1,8 @@
 import { FC, HTMLAttributeAnchorTarget, memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Text } from 'shared/ui';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui';
 import { useTranslation } from 'react-i18next';
-import { TextSize } from 'shared/ui/Text/Text';
+import { TextSize } from '@/shared/ui/Text/Text';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';

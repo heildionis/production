@@ -1,16 +1,16 @@
 import { FC } from 'react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import {
     Avatar,
     Input,
     Loader,
     Text,
-} from 'shared/ui';
-import { TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { Currency, CurrencySelect } from 'entities/Currency';
-import { Country, CountrySelect } from 'entities/Country';
-import { HStack, VStack } from 'shared/ui/Stack';
+} from '@/shared/ui';
+import { TextAlign, TextTheme } from '@/shared/ui/Text/Text';
+import { Currency, CurrencySelect } from '@/entities/Currency';
+import { Country, CountrySelect } from '@/entities/Country';
+import { HStack, VStack } from '@/shared/ui/Stack';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
 

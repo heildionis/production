@@ -1,8 +1,8 @@
 /* eslint-disable i18next/no-literal-string */
-import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from 'shared/ui';
+import { Button } from '@/shared/ui';
 import { getCounterValue } from '../model/selectors/getCouterValue/getCounterValue';
 import { counterAtions } from '../model/slice/counterSlice';
 
