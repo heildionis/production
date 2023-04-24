@@ -1,4 +1,4 @@
-import { FC, HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { FC, HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, Avatar, Button, Card, Icon, Text } from 'shared/ui';
@@ -6,21 +6,21 @@ import EyeIcon from 'shared/assets/icons/eye.svg';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Article, ArticleBlockType, ArticleTextBlock, ArticleView } from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { ArticleBlockType, ArticleView } from '../../model/constants/articleConsts';
 
 interface ArticleListItemProps {
    className?: string;
    article: Article;
    view: ArticleView;
-   target?: HTMLAttributeAnchorTarget
+   target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem: FC<ArticleListItemProps> = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
     const { t } = useTranslation('articles');
-    const navigate = useNavigate();
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (

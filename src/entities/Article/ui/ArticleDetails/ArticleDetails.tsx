@@ -29,11 +29,12 @@ import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArt
 import { getArticleDetailsError } from '../../model/selectors/getArticleError/getArticleDetailsError';
 import { getArticleDetailsData } from '../../model/selectors/getArticleDetailsData/getArticleDetailsData';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleDetails.module.scss';
+import { ArticleBlockType } from '../../model/constants/articleConsts';
 
 interface ArticleDetailsProps {
    className?: string;
