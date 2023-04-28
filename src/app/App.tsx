@@ -1,9 +1,9 @@
-import { AppRouter } from '@/app/providers/router';
+import { Suspense, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppRouter } from './providers/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { Suspense, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { userActions, getUserInited } from '@/entities/User';
 
 export const App = () => {
