@@ -8,9 +8,6 @@ import ProfilePage from './ProfilePage';
 export default {
     title: 'pages/ProfilePage',
     component: ProfilePage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ProfilePage>;
 

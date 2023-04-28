@@ -1,10 +1,10 @@
-import  { createSlice, PayloadAction } from  '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AdminPanelPageSchema } from '../types/AdminPanelPageSchema';
-    
+
 const initialState: AdminPanelPageSchema = {
 
-}
-    
+};
+
 export const AdminPanelPageSlice = createSlice({
     name: 'AdminPanelPage',
     initialState,
@@ -27,7 +27,7 @@ export const AdminPanelPageSlice = createSlice({
     //             state.error = action.payload;
     //         });
     // },
-})
+});
 
 export const { actions: AdminPanelPageActions } = AdminPanelPageSlice;
 export const { reducer: AdminPanelPageReducer } = AdminPanelPageSlice;

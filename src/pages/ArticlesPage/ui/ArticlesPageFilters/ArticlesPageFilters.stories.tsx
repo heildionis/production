@@ -4,9 +4,6 @@ import { ArticlesPageFilters } from './ArticlesPageFilters';
 export default {
     title: 'pages/Article/ArticlesPageFilters',
     component: ArticlesPageFilters,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 } as ComponentMeta<typeof ArticlesPageFilters>;
 
 const Template: ComponentStory<typeof ArticlesPageFilters> = (args) => <ArticlesPageFilters {...args} />;
