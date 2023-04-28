@@ -4,12 +4,11 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, Avatar, Button, Card, Icon, Text } from '@/shared/ui';
 import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { ButtonTheme } from '@/shared/ui/Button/Button';
-import { useNavigate } from 'react-router-dom';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleBlockType, ArticleView } from '../../model/constants/articleConsts';
+import { RoutePath } from '@/shared/constants/router';
 
 interface ArticleListItemProps {
    className?: string;

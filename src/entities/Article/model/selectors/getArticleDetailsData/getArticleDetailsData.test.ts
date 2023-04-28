@@ -1,7 +1,7 @@
-import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
 import { Article } from '../../types/article';
 import { getArticleDetailsData } from './getArticleDetailsData';
 import { ArticleBlockType, ArticleType } from '../../constants/articleConsts';
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 describe('getArticleDetailsData.test', () => {
     test('to have data', () => {

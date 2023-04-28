@@ -1,5 +1,5 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card, Text } from '@/shared/ui';
 import { CardTheme } from '@/shared/ui/Card/Card';
 import { Notification } from '../../model/types/notifications';

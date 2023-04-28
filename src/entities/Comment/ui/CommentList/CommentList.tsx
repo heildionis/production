@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui';
 import { VStack } from '@/shared/ui/Stack';
 import { Comment } from '../../model/types/comment';
