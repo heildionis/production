@@ -1,15 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { Modal } from './Modal';
+import { Theme } from '@/shared/constants/theme';
 
 export default {
     title: 'shared/Modal',
     component: Modal,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
     args: {
         isOpen: true,
     },

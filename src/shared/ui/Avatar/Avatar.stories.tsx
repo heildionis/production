@@ -6,9 +6,6 @@ import AvatarImg from './storybook.jpg';
 export default {
     title: 'shared/Avatar',
     component: Avatar,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 } as ComponentMeta<typeof Avatar>;
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;

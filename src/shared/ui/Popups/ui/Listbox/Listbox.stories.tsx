@@ -2,13 +2,14 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Listbox } from './Listbox';
 
 export default {
-    title: 'shared/Listbox',
+    title: 'shared/Popups/Listbox',
     component: Listbox,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
     decorators: [
-        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof Listbox>;
 
