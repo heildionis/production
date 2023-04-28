@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 import { BuildOptions } from '../types/config';
 import babelRemovePropsPlugin from '../../babel/babelRemovePropsPlugin';
-import babelFindTranslations from '../../babel/babelFindTranslations';
 
 interface BuildBabelLoaderProps extends BuildOptions {
     isTsx: boolean;
@@ -34,9 +33,6 @@ export const buildBabelLoader = ({ isDev, isTsx }: BuildBabelLoaderProps): webpa
                     {
                         props: ['data-testid'],
                     },
-                ],
-                isTsx && [
-                    babelFindTranslations,
                 ],
                 isDev && require.resolve('react-refresh/babel'),
             ].filter(Boolean),
