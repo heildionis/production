@@ -1,9 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from '@/shared/ui';
+
 import { getCounterValue } from '../model/selectors/getCouterValue/getCounterValue';
 import { counterAtions } from '../model/slice/counterSlice';
+
+import { Button } from '@/shared/ui/Button';
 
 interface CounterProps {
 }

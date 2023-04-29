@@ -3,10 +3,12 @@ import {
     createSlice,
     PayloadAction,
 } from '@reduxjs/toolkit';
+
+import { fetchArticleRecommendations } from '../services/fetchArtilceRecommendations/fetchArtilceRecommendations';
+import { ArticleDetatilsPageRecommendationsSchema } from '../types/ArticleDetatilsPageRecommendationsSchema';
+
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { Article } from '@/entities/Article';
-import { ArticleDetatilsPageRecommendationsSchema } from '../types/ArticleDetatilsPageRecommendationsSchema';
-import { fetchArticleRecommendations } from '../services/fetchArtilceRecommendations/fetchArtilceRecommendations';
 
 const recommendationsAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,

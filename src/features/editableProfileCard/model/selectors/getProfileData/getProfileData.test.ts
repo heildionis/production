@@ -1,6 +1,7 @@
+import { getProfileData } from './getProfileData';
+
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { mockedProfileJest } from '@/entities/Profile';
-import { getProfileData } from './getProfileData';
 
 describe('getProfileData.test', () => {
     test('should work with filled state', () => {

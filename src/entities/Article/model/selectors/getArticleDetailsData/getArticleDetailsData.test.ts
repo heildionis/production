@@ -1,6 +1,8 @@
-import { Article } from '../../types/article';
-import { getArticleDetailsData } from './getArticleDetailsData';
 import { ArticleBlockType, ArticleType } from '../../constants/articleConsts';
+import { Article } from '../../types/article';
+
+import { getArticleDetailsData } from './getArticleDetailsData';
+
 import { StateSchema } from '@/app/providers/StoreProvider';
 
 describe('getArticleDetailsData.test', () => {

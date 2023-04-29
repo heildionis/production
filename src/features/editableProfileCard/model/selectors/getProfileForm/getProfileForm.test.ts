@@ -1,6 +1,7 @@
+import { getProfileForm } from './getProfileForm';
+
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { mockedProfileJest } from '@/entities/Profile';
-import { getProfileForm } from './getProfileForm';
 
 describe('getProfileForm.test', () => {
     test('should work with filled state', () => {

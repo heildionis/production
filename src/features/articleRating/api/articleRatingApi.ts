@@ -1,4 +1,3 @@
-import { Article } from '@/entities/Article';
 import { Rating } from '@/entities/Rating';
 import { rtkApi } from '@/shared/api/rtkApi';
 

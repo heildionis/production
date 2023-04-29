@@ -1,9 +1,11 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
 // @ts-ignore
 import withMock from 'storybook-addon-mock';
-import { Article, ArticleType } from '@/entities/Article';
+
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
+
+import { Article, ArticleType } from '@/entities/Article';
 
 export default {
     title: 'features/ArticleRecommendationsList',

@@ -1,7 +1,9 @@
-import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { mockedProfileJest } from '@/entities/Profile';
-import { updateProfileData } from './updateProfileData';
 import { ValidateProfileError } from '../../constants/constants';
+
+import { updateProfileData } from './updateProfileData';
+
+import { mockedProfileJest } from '@/entities/Profile';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 
 const data = { ...mockedProfileJest };
 

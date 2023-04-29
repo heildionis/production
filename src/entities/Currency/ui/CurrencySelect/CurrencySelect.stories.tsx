@@ -1,8 +1,9 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+
+import { CurrencySelect } from './CurrencySelect';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import { CurrencySelect } from './CurrencySelect';
 
 export default {
     title: 'entities/CurrencySelect',
