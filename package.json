@@ -27,8 +27,8 @@
     "prepare": "husky install",
     "generate:slice": "node ./scripts/createSlice/index.js",
     "generate:slice:docs": "npx ts-node ./scripts/generate-readme-for-slice.ts",
-    "generate:api": "npx ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
-    "import:update": "npx ts-node ./scripts/refactoring/updateImports.ts"
+    "generate:ui:api": "npx ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
+    "generate:import:update": "npx ts-node ./scripts/refactoring/updateImports.ts"
   },
   "keywords": [],
   "author": "",
@@ -75,7 +75,7 @@
     "eslint": "^8.0.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-standard-with-typescript": "^34.0.0",
-    "eslint-plugin-heildionis-plugin": "^0.0.8",
+    "eslint-plugin-heildionis-plugin": "^0.0.9",
     "eslint-plugin-i18next": "5.1.2",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.5.1",
