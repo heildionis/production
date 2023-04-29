@@ -13,11 +13,12 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'heildionis-plugin'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'heildionis-plugin', 'unused-imports'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         'react/jsx-filename-extension': [
             2,
             {
@@ -34,6 +35,23 @@ module.exports = {
         'react/function-component-definition': 'off',
         'react/no-array-index-key': 'warn',
         'no-shadow': 'off',
+        'import/order': [
+            'error',
+            {
+                pathGroups: [
+                    {
+                        pattern: '@/**',
+                        group: 'internal',
+                        position: 'after',
+                    },
+                ],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: false,
+                },
+            },
+        ],
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
