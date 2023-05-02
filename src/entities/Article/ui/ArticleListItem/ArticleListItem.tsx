@@ -8,7 +8,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import cls from './ArticleListItem.module.scss';
 
 import EyeIcon from '@/shared/assets/icons/eye.svg';
-import { RoutePath } from '@/shared/constants/router';
+import { getRouteArticleDetails } from '@/shared/constants/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -59,7 +59,7 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo((props: ArticleLis
                         />
                     )}
                     <div className={cls.footer}>
-                        <AppLink to={RoutePath.article_details + article.id}>
+                        <AppLink to={getRouteArticleDetails(article.id)}>
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                             >
@@ -76,7 +76,7 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo((props: ArticleLis
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>
