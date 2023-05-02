@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { getCanEditArticle } from '../../model/selectors/article/article';
 
 import { getArticleDetailsData } from '@/entities/Article';
-import { RoutePath } from '@/shared/constants/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/constants/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
@@ -24,11 +24,13 @@ export const ArticleDeatilsPageHeader: FC<ArticleDeatilsPageHeaderProps> = memo(
         const article = useSelector(getArticleDetailsData);
 
         const onBackToList = useCallback(() => {
-            navigate(RoutePath.articles);
+            navigate(getRouteArticles());
         }, [navigate]);
 
         const onEditArticle = useCallback(() => {
-            navigate(`${RoutePath.article_details}${article?.id}/edit`);
+            if (article?.id) {
+                navigate(getRouteArticleEdit(article?.id));
+            }
         }, [navigate, article?.id]);
 
         return (

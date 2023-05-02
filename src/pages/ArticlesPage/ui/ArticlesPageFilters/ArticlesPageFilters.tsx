@@ -16,12 +16,12 @@ import cls from './ArticlesPageFilters.module.scss';
 
 import {
     ArticleSortField,
-    ArticleSortSelector,
     ArticleType,
-    ArticleTypeTabs,
     ArticleView,
-    ArticleViewSelector,
 } from '@/entities/Article';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
@@ -88,7 +88,10 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = memo((props: Ar
                     onChangeOrder={onChangeOrder}
                     onChangeSort={onChangeSort}
                 />
-                <ArticleViewSelector view={view} onViewClick={onChangeView} />
+                <ArticleViewSelector
+                    view={view}
+                    onViewClick={onChangeView}
+                />
             </div>
             <Card className={cls.search}>
                 <Input
