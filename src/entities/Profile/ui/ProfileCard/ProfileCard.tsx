@@ -77,7 +77,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
         <VStack gap='16' className={classNames(cls.ProfileCard, mods, [className])} fullWidth>
             {data?.avatar && (
                 <HStack justify='center' fullWidth className={cls.avatarWrapper}>
-                    <Avatar src={data?.avatar} alt='' />
+                    <Avatar size={250} src={data?.avatar} alt='' />
                 </HStack>
             )}
             <Input
