@@ -106,7 +106,7 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing', '**/componentRender'],
             },
         ],
     },
