@@ -55,6 +55,7 @@ export const Flex: FC<FlexProps> = (props: FlexProps) => {
         direction = 'row',
         gap,
         fullWidth,
+        ...otherProps
     } = props;
 
     const additional = [
@@ -66,7 +67,7 @@ export const Flex: FC<FlexProps> = (props: FlexProps) => {
     ];
 
     return (
-        <div className={classNames(cls.Flex, { [cls.fullWidth]: fullWidth }, additional)}>
+        <div className={classNames(cls.Flex, { [cls.fullWidth]: fullWidth }, additional)} {...otherProps}>
             {children}
         </div>
     );

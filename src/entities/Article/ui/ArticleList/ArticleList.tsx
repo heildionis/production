@@ -55,14 +55,14 @@ export const ArticleList: FC<ArticleListProps> = memo((props: ArticleListProps) 
 
     if (!isLoading && !articles.length) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])} data-testid='ArticleList'>
                 <Text size={TextSize.L} title={t('Статьи не найдены')} />
             </div>
         );
     }
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])} data-testid='ArticleList'>
             {articles.length > 0 ? articles.map(renderArticle) : null}
             {isLoading && getSkeletons(view)}
         </div>

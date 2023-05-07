@@ -65,12 +65,17 @@ export const RatingCard: FC<RatingCardProps> = memo((props: RatingCardProps) => 
     const modalContent = (
         <>
             <Text title={feedbackTitle} />
-            <Input value={feedback} onChange={setFeedback} placeholder={t('Ваш отзыв')} />
+            <Input
+                value={feedback}
+                onChange={setFeedback}
+                placeholder={t('Ваш отзыв')}
+                data-testid='RatingCard.Input'
+            />
         </>
     );
 
     return (
-        <Card fullWidth className={classNames(cls.RatingCard, {}, [className])}>
+        <Card fullWidth className={classNames(cls.RatingCard, {}, [className])} data-testid='RatingCard'>
             <VStack align='center' gap='8'>
                 <Text title={starsCount ? t('Спасибо за оценку!!!') : title} />
                 <StarRating
@@ -84,10 +89,18 @@ export const RatingCard: FC<RatingCardProps> = memo((props: RatingCardProps) => 
                     <VStack fullWidth gap='32'>
                         {modalContent}
                         <HStack fullWidth gap='16' justify='end'>
-                            <Button onClick={onCancelHandler} theme={ButtonTheme.OUTLINE_RED}>
+                            <Button
+                                onClick={onCancelHandler}
+                                theme={ButtonTheme.OUTLINE_RED}
+                                data-testid='RatingCard.Close'
+                            >
                                 {t('Закрыть')}
                             </Button>
-                            <Button onClick={onAcceptHandler} theme={ButtonTheme.OUTLINE}>
+                            <Button
+                                onClick={onAcceptHandler}
+                                theme={ButtonTheme.OUTLINE}
+                                data-testid='RatingCard.Send'
+                            >
                                 {t('Отправить')}
                             </Button>
                         </HStack>
@@ -97,7 +110,11 @@ export const RatingCard: FC<RatingCardProps> = memo((props: RatingCardProps) => 
                 <Drawer isOpen={isModalOpen} lazy onClose={onCancelHandler}>
                     <VStack gap='32'>
                         {modalContent}
-                        <Button fullWidth onClick={onAcceptHandler}>
+                        <Button
+                            fullWidth
+                            onClick={onAcceptHandler}
+                            data-testid='RatingCard.Send'
+                        >
                             {t('Отправить')}
                         </Button>
                     </VStack>

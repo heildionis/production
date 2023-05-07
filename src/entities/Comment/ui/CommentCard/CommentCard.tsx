@@ -23,7 +23,7 @@ export const CommentCard: FC<CommentCardProps> = (props) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
+            <div className={classNames(cls.CommentCard, {}, [className, cls.loading])} data-testid='CommentCard.Loading'>
                 <div className={cls.header}>
                     <Skeleton
                         width={30}
@@ -50,7 +50,7 @@ export const CommentCard: FC<CommentCardProps> = (props) => {
     }
 
     return (
-        <VStack fullWidth gap='8' className={classNames(cls.CommentCard, {}, [className])}>
+        <VStack fullWidth gap='8' className={classNames(cls.CommentCard, {}, [className])} data-testid='CommentCard.Content'>
             <AppLink to={getRouteProfile(comment.user.id)} className={cls.header}>
                 {comment.user.avatar ? <Avatar size={30} src={comment.user.avatar} /> : null}
                 <Text className={cls.username} title={comment.user.username} />
