@@ -10,12 +10,17 @@ interface NotFoundPageProps {
     className?: string;
 }
 
-export const NotFoundPage: FC<NotFoundPageProps> = memo(({ className }: NotFoundPageProps) => {
-    const { t } = useTranslation();
+export const NotFoundPage: FC<NotFoundPageProps> = memo(
+    ({ className }: NotFoundPageProps) => {
+        const { t } = useTranslation();
 
-    return (
-        <Page data-testid='NotFoundPage' className={classNames(cls.NotFoundPage, {}, [className])}>
-            {t('Страница не найдена')}
-        </Page>
-    );
-});
+        return (
+            <Page
+                data-testid='NotFoundPage'
+                className={classNames(cls.NotFoundPage, {}, [className])}
+            >
+                {t('Страница не найдена')}
+            </Page>
+        );
+    }
+);

@@ -20,9 +20,7 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
     return (
         <div className={classNames(cls.PageError, {}, [className])}>
             <p>{t('Unhappend Error')}</p>
-            <Button onClick={reloadPage}>
-                {t('Update page')}
-            </Button>
+            <Button onClick={reloadPage}>{t('Update page')}</Button>
         </div>
     );
 };

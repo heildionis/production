@@ -8,18 +8,21 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Code } from '@/shared/ui/Code';
 
 interface ArticleCodeBlockComponentProps {
-   className?: string;
-   block: ArticleCodeBlock;
+    className?: string;
+    block: ArticleCodeBlock;
 }
 
-export const ArticleCodeBlockComponent: FC<ArticleCodeBlockComponentProps> = memo(
-    (props: ArticleCodeBlockComponentProps) => {
+export const ArticleCodeBlockComponent: FC<ArticleCodeBlockComponentProps> =
+    memo((props: ArticleCodeBlockComponentProps) => {
         const { className, block } = props;
 
         return (
-            <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])}>
+            <div
+                className={classNames(cls.ArticleCodeBlockComponent, {}, [
+                    className,
+                ])}
+            >
                 <Code text={block.code} />
             </div>
         );
-    },
-);
+    });

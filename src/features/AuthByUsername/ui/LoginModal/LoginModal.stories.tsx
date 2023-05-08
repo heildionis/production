@@ -15,11 +15,14 @@ export default {
     },
 } as ComponentMeta<typeof LoginModal>;
 
-const Template: ComponentStory<typeof LoginModal> = (args) => <LoginModal {...args} />;
+const Template: ComponentStory<typeof LoginModal> = (args) => (
+    <LoginModal {...args} />
+);
 
 export const Primary = Template.bind({});
 
-Primary.decorators = [ThemeDecorator(Theme.LIGHT),
+Primary.decorators = [
+    ThemeDecorator(Theme.LIGHT),
     StoreDecorator({
         loginForm: {
             username: 'name',
@@ -30,7 +33,8 @@ Primary.decorators = [ThemeDecorator(Theme.LIGHT),
 
 export const Secondary = Template.bind({});
 
-Secondary.decorators = [ThemeDecorator(Theme.DARK),
+Secondary.decorators = [
+    ThemeDecorator(Theme.DARK),
     StoreDecorator({
         loginForm: {
             username: 'name',

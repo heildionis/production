@@ -8,20 +8,13 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 export type AppLinkTheme = 'primary' | 'secondary';
 
 interface AppLinkProps extends LinkProps {
-    className?: string
+    className?: string;
     theme?: AppLinkTheme;
     children?: ReactNode;
-
 }
 
 export const AppLink: FC<AppLinkProps> = memo((props: AppLinkProps) => {
-    const {
-        to,
-        className,
-        children,
-        theme = 'primary',
-        ...otherProps
-    } = props;
+    const { to, className, children, theme = 'primary', ...otherProps } = props;
 
     return (
         <Link

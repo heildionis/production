@@ -1,6 +1,4 @@
-import {
-    FC, memo, useCallback,
-} from 'react';
+import { FC, memo, useCallback } from 'react';
 
 import { Button, ButtonTheme } from '../Button/Button';
 
@@ -10,8 +8,8 @@ import CopyIcon from '@/shared/assets/icons/copy.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface CodeProps {
-   className?: string;
-   text: string;
+    className?: string;
+    text: string;
 }
 
 export const Code: FC<CodeProps> = memo((props: CodeProps) => {
@@ -30,9 +28,7 @@ export const Code: FC<CodeProps> = memo((props: CodeProps) => {
             >
                 <CopyIcon className={cls.copyIcon} />
             </Button>
-            <code>
-                {text}
-            </code>
+            <code>{text}</code>
         </pre>
     );
 });

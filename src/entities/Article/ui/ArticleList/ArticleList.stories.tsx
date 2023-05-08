@@ -22,12 +22,7 @@ const article = {
         id: '1',
         username: 'Denis Sarzhan',
     },
-    type: [
-        'IT',
-        'SCIENCE',
-        'POLITICS',
-        'ECONOMICS',
-    ],
+    type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
     blocks: [
         {
             id: '1',
@@ -88,11 +83,15 @@ const article = {
     ],
 } as any;
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+    <ArticleList {...args} />
+);
 
 export const Small = Template.bind({});
 Small.args = {
-    articles: new Array(16).fill(0).map((item, index) => ({ ...article, id: index })),
+    articles: new Array(16)
+        .fill(0)
+        .map((item, index) => ({ ...article, id: index })),
 };
 
 export const isLoadingSmall = Template.bind({});
@@ -104,7 +103,9 @@ isLoadingSmall.args = {
 
 export const Big = Template.bind({});
 Big.args = {
-    articles: new Array(16).fill(0).map((item, index) => ({ ...article, id: index })),
+    articles: new Array(16)
+        .fill(0)
+        .map((item, index) => ({ ...article, id: index })),
     view: ArticleView.BIG,
 };
 

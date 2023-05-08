@@ -16,7 +16,7 @@ import { HStack } from '@/shared/ui/Stack';
 import { TextTheme, Text } from '@/shared/ui/Text';
 
 interface NavbarProps {
-    className?: string
+    className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -65,7 +65,9 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             >
                 {t('Войти')}
             </Button>
-            {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
+            {isAuthModal && (
+                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+            )}
         </header>
     );
 });

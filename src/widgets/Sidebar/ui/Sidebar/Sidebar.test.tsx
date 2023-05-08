@@ -5,12 +5,12 @@ import { Sidebar } from './Sidebar';
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 
 describe('Sidebar Test', () => {
-    test(('To Be Rendered'), () => {
+    test('To Be Rendered', () => {
         componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
-    test(('Test toggle'), () => {
+    test('Test toggle', () => {
         componentRender(<Sidebar />);
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();

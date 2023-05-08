@@ -9,9 +9,9 @@ import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 
 interface CommentListProps {
-   className?: string;
-   comments: Comment[];
-   isLoading?: boolean
+    className?: string;
+    comments: Comment[];
+    isLoading?: boolean;
 }
 
 export const CommentList: FC<CommentListProps> = (props) => {
@@ -30,15 +30,17 @@ export const CommentList: FC<CommentListProps> = (props) => {
 
     return (
         <VStack gap='16' fullWidth className={classNames('', {}, [className])}>
-            {comments?.length
-                ? (comments.map((comment) => (
+            {comments?.length ? (
+                comments.map((comment) => (
                     <CommentCard
                         isLoading={isLoading}
                         key={comment.id}
                         comment={comment}
                     />
-                )))
-                : <Text text={t('Комментарии отсутсвуют')} />}
+                ))
+            ) : (
+                <Text text={t('Комментарии отсутсвуют')} />
+            )}
         </VStack>
     );
 };

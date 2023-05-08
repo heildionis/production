@@ -15,7 +15,8 @@ const commentsAdapter = createEntityAdapter<Comment>({
 });
 
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
+    (state) =>
+        state.articleDetailsPage?.comments || commentsAdapter.getInitialState()
 );
 
 const articleDetailsCommentSlice = createSlice({
@@ -26,22 +27,20 @@ const articleDetailsCommentSlice = createSlice({
         ids: [],
         entities: {},
     }),
-    reducers: {
-
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchCommentsByArticleId.pending, (state) => {
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(fetchCommentsByArticleId.fulfilled, (
-                state,
-                action: PayloadAction<Comment[]>,
-            ) => {
-                state.isLoading = false;
-                commentsAdapter.setAll(state, action.payload);
-            })
+            .addCase(
+                fetchCommentsByArticleId.fulfilled,
+                (state, action: PayloadAction<Comment[]>) => {
+                    state.isLoading = false;
+                    commentsAdapter.setAll(state, action.payload);
+                }
+            )
             .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
@@ -49,5 +48,7 @@ const articleDetailsCommentSlice = createSlice({
     },
 });
 
-export const { actions: articleDetailsCommentActions } = articleDetailsCommentSlice;
-export const { reducer: articleDetailsCommentReducer } = articleDetailsCommentSlice;
+export const { actions: articleDetailsCommentActions } =
+    articleDetailsCommentSlice;
+export const { reducer: articleDetailsCommentReducer } =
+    articleDetailsCommentSlice;

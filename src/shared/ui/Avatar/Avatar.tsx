@@ -1,6 +1,4 @@
-import {
-    CSSProperties, FC, memo, useMemo,
-} from 'react';
+import { CSSProperties, FC, memo, useMemo } from 'react';
 
 import { AppImage } from '../AppImage';
 import { Icon } from '../Icon';
@@ -20,26 +18,17 @@ interface AvatarProps {
 }
 
 export const Avatar: FC<AvatarProps> = memo((props: AvatarProps) => {
-    const {
-        className,
-        src,
-        alt,
-        size,
-        fallbackInverted,
-    } = props;
+    const { className, src, alt, size, fallbackInverted } = props;
 
-    const styles = useMemo<CSSProperties>(() => ({
-        width: size || 100,
-        height: size || 100,
-    }), [size]);
-
-    const fallback = (
-        <Skeleton
-            width={size}
-            height={size}
-            border='50%'
-        />
+    const styles = useMemo<CSSProperties>(
+        () => ({
+            width: size || 100,
+            height: size || 100,
+        }),
+        [size]
     );
+
+    const fallback = <Skeleton width={size} height={size} border='50%' />;
 
     const errorFallback = (
         <Icon

@@ -20,39 +20,49 @@ import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
 interface ArticleDetailsPageProps {
-   className?: string;
+    className?: string;
 }
 
 const reducers: ReducersList = {
     articleDetailsPage: articleDetailsPageReducer,
 };
 
-const ArticleDetailsPage: FC<ArticleDetailsPageProps> = memo((props: ArticleDetailsPageProps) => {
-    const { className } = props;
-    const { t } = useTranslation('article-details');
-    const { id } = useParams<{id: string}>();
+const ArticleDetailsPage: FC<ArticleDetailsPageProps> = memo(
+    (props: ArticleDetailsPageProps) => {
+        const { className } = props;
+        const { t } = useTranslation('article-details');
+        const { id } = useParams<{ id: string }>();
 
-    if (!id) {
+        if (!id) {
+            return (
+                <Page
+                    className={classNames(cls.ArticleDetailsPage, {}, [
+                        className,
+                    ])}
+                >
+                    {t('Статья не найдена')}
+                </Page>
+            );
+        }
+
         return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('Статья не найдена')}
-            </Page>
+            <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+                <Page
+                    className={classNames(cls.ArticleDetailsPage, {}, [
+                        className,
+                    ])}
+                >
+                    <VStack gap='16' fullWidth>
+                        <ArticleDeatilsPageHeader />
+                        <ArticleDetails id={id} />
+                        <ArticleRating articleId={id} />
+                        <ArticleRecommendationsList />
+                        <ArticleDetailsComments id={id} />
+                    </VStack>
+                </Page>
+            </DynamicModuleLoader>
         );
     }
-
-    return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <VStack gap='16' fullWidth>
-                    <ArticleDeatilsPageHeader />
-                    <ArticleDetails id={id} />
-                    <ArticleRating articleId={id} />
-                    <ArticleRecommendationsList />
-                    <ArticleDetailsComments id={id} />
-                </VStack>
-            </Page>
-        </DynamicModuleLoader>
-    );
-});
+);
 
 export default ArticleDetailsPage;

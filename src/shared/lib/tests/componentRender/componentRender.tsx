@@ -23,17 +23,18 @@ export interface TestProviderProps {
     options?: ComponentRenderOptions;
 }
 
-export const TestProvider: FC<TestProviderProps> = ({ children, options = {} }) => {
-    const {
-        route = '/',
-        initialState,
-        asyncReducers,
-        theme,
-    } = options;
+export const TestProvider: FC<TestProviderProps> = ({
+    children,
+    options = {},
+}) => {
+    const { route = '/', initialState, asyncReducers, theme } = options;
 
     return (
         <MemoryRouter initialEntries={[route]}>
-            <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
+            <StoreProvider
+                asyncReducers={asyncReducers}
+                initialState={initialState}
+            >
                 <I18nextProvider i18n={i18nForTests}>
                     <ThemeProvider initialTheme={theme}>
                         {children}
@@ -43,10 +44,9 @@ export const TestProvider: FC<TestProviderProps> = ({ children, options = {} }) 
         </MemoryRouter>
     );
 };
-export function componentRender(component: ReactNode, options: ComponentRenderOptions = {}) {
-    return render(
-        <TestProvider options={options}>
-            {component}
-        </TestProvider>,
-    );
+export function componentRender(
+    component: ReactNode,
+    options: ComponentRenderOptions = {}
+) {
+    return render(<TestProvider options={options}>{component}</TestProvider>);
 }

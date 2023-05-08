@@ -9,7 +9,9 @@ export default {
     component: CommentCard,
 } as ComponentMeta<typeof CommentCard>;
 
-const Template: ComponentStory<typeof CommentCard> = (args) => <CommentCard {...args} />;
+const Template: ComponentStory<typeof CommentCard> = (args) => (
+    <CommentCard {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -18,12 +20,9 @@ Normal.args = {
         text: 'hello world',
         user: { id: '1', username: 'Vasya' },
     },
-
 };
 
-Normal.decorators = [
-    StoreDecorator({}),
-];
+Normal.decorators = [StoreDecorator({})];
 
 export const Loading = Template.bind({});
 Loading.args = {
@@ -33,9 +32,6 @@ Loading.args = {
         text: 'hello world',
         user: { id: '1', username: 'Vasya' },
     },
-
 };
 
-Loading.decorators = [
-    StoreDecorator({}),
-];
+Loading.decorators = [StoreDecorator({})];

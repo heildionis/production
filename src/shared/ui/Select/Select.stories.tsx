@@ -19,9 +19,7 @@ export default {
 const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-
-};
+Primary.args = {};
 
 export const Readonly = Template.bind({});
 Readonly.args = {

@@ -1,6 +1,4 @@
-import {
-    ButtonHTMLAttributes, FC, memo, ReactNode,
-} from 'react';
+import { ButtonHTMLAttributes, FC, memo, ReactNode } from 'react';
 
 import cls from './Button.module.scss';
 
@@ -21,7 +19,7 @@ export enum ButtonSize {
     XL = 'size_xl',
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ButtonTheme;
     square?: boolean;

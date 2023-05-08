@@ -16,20 +16,24 @@ const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({
-    profile: {
-        form: {
-            ...mockedProfileData,
+Normal.decorators = [
+    StoreDecorator({
+        profile: {
+            form: {
+                ...mockedProfileData,
+            },
         },
-    },
-})];
+    }),
+];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [StoreDecorator({
-    profile: {
-        form: {
-            ...mockedProfileData,
+Dark.decorators = [
+    StoreDecorator({
+        profile: {
+            form: {
+                ...mockedProfileData,
+            },
         },
-    },
-})];
+    }),
+];

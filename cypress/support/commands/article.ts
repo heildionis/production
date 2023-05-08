@@ -7,29 +7,31 @@ const defaultArticle = {
     views: 1022,
     createdAt: '26.02.2022',
     userId: '1',
-    type: [
-        'SCIENCE',
-    ],
+    type: ['SCIENCE'],
     blocks: [],
 };
 
-export const createArticle = (article: Article) => cy.request({
-    method: 'POST',
-    url: 'http://localhost:5000/articles',
-    headers: { Authorization: 'adsasd' },
-    body: article ?? defaultArticle,
-}).then((res) => res.body);
-export const removeArticle = (articleId: string) => cy.request({
-    method: 'DELETE',
-    url: `http://localhost:5000/articles/${articleId}`,
-    headers: { Authorization: 'adsasd' },
-});
+export const createArticle = (article: Article) =>
+    cy
+        .request({
+            method: 'POST',
+            url: 'http://localhost:5000/articles',
+            headers: { Authorization: 'adsasd' },
+            body: article ?? defaultArticle,
+        })
+        .then((res) => res.body);
+export const removeArticle = (articleId: string) =>
+    cy.request({
+        method: 'DELETE',
+        url: `http://localhost:5000/articles/${articleId}`,
+        headers: { Authorization: 'adsasd' },
+    });
 
 declare global {
     namespace Cypress {
         interface Chainable {
-            createArticle(article?: Article): Chainable<Article>
-            removeArticle(articleId?: string): Chainable<Article>
+            createArticle(article?: Article): Chainable<Article>;
+            removeArticle(articleId?: string): Chainable<Article>;
         }
     }
 }

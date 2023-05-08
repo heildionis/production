@@ -28,11 +28,7 @@ export const RequireAuth: FC<RequireAuthProps> = ({ children, roles }) => {
 
     if (!auth) {
         return (
-            <Navigate
-                to={getRouteMain()}
-                state={{ from: location }}
-                replace
-            />
+            <Navigate to={getRouteMain()} state={{ from: location }} replace />
         );
     }
 
@@ -46,5 +42,5 @@ export const RequireAuth: FC<RequireAuthProps> = ({ children, roles }) => {
         );
     }
 
-    return (children);
+    return children;
 };

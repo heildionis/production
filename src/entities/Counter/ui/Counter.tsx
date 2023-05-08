@@ -6,8 +6,7 @@ import { useCounterActions } from '../model/slice/counterSlice';
 
 import { Button } from '@/shared/ui/Button';
 
-interface CounterProps {
-}
+interface CounterProps {}
 
 export const Counter: FC<CounterProps> = (props) => {
     const counterValue = useCounterValue();
@@ -27,27 +26,17 @@ export const Counter: FC<CounterProps> = (props) => {
 
     return (
         <div>
-            <h1 data-testid='value-title'>
-                value =
-                {' '}
-                {counterValue}
-            </h1>
+            <h1 data-testid='value-title'>value = {counterValue}</h1>
             <Button
                 onClick={onAdd}
                 // data-testid='increment-btn'
             >
                 Add 5
             </Button>
-            <Button
-                onClick={onIncrement}
-                data-testid='increment-btn'
-            >
+            <Button onClick={onIncrement} data-testid='increment-btn'>
                 increment
             </Button>
-            <Button
-                onClick={onDecrement}
-                data-testid='decrement-btn'
-            >
+            <Button onClick={onDecrement} data-testid='decrement-btn'>
                 decrement
             </Button>
         </div>

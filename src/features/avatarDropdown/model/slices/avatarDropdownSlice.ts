@@ -2,17 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { AvatarDropdownSchema } from '../types/avatarDropdownSchema';
 
-const initialState: AvatarDropdownSchema = {
-
-};
+const initialState: AvatarDropdownSchema = {};
 
 export const avatarDropdownSlice = createSlice({
     name: 'avatarDropdown',
     initialState,
     reducers: {
-        template: (state, action: PayloadAction<string>) => {
-
-        },
+        template: (state, action: PayloadAction<string>) => {},
     },
     // extraReducers: (builder) => {
     //     builder

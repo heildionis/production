@@ -22,3 +22,5 @@ describe('Пользователь заходит на страницу стат
         cy.get('asdasad').should('exist');
     });
 });
+
+export {};

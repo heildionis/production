@@ -6,26 +6,26 @@ describe('counterSlice.test', () => {
     test('increment', () => {
         const state: CounterSchema = { value: 10 };
         expect(
-            counterReducer(state as CounterSchema, counterAtions.increment()),
+            counterReducer(state as CounterSchema, counterAtions.increment())
         ).toEqual({ value: 11 });
     });
 
     test('decrement', () => {
         const state: CounterSchema = { value: 10 };
         expect(
-            counterReducer(state as CounterSchema, counterAtions.decrement()),
+            counterReducer(state as CounterSchema, counterAtions.decrement())
         ).toEqual({ value: 9 });
     });
 
     test('should work with empty', () => {
-        expect(
-            counterReducer(undefined, counterAtions.increment()),
-        ).toEqual({ value: 1 });
+        expect(counterReducer(undefined, counterAtions.increment())).toEqual({
+            value: 1,
+        });
     });
 
     test('should work with empty', () => {
-        expect(
-            counterReducer(undefined, counterAtions.decrement()),
-        ).toEqual({ value: -1 });
+        expect(counterReducer(undefined, counterAtions.decrement())).toEqual({
+            value: -1,
+        });
     });
 });

@@ -1,10 +1,5 @@
 import { Menu } from '@headlessui/react';
-import {
-    FC,
-    Fragment,
-    ReactNode,
-    memo,
-} from 'react';
+import { FC, Fragment, ReactNode, memo } from 'react';
 
 import { AppLink } from '../../../AppLink/AppLink';
 import { mapDirectionClass } from '../../styles/consts';
@@ -19,7 +14,7 @@ export interface DropdownItem {
     disabled?: boolean;
     content?: ReactNode;
     onClick?: () => void;
-    href?: string
+    href?: string;
 }
 
 interface DropdownProps {
@@ -30,12 +25,7 @@ interface DropdownProps {
 }
 
 export const Dropdown: FC<DropdownProps> = memo((props: DropdownProps) => {
-    const {
-        className,
-        items,
-        trigger,
-        direction = 'bottom right',
-    } = props;
+    const { className, items, trigger, direction = 'bottom right' } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
 
@@ -46,7 +36,9 @@ export const Dropdown: FC<DropdownProps> = memo((props: DropdownProps) => {
                 {items.map((item, index) => {
                     const content = ({ active }: { active: boolean }) => (
                         <button
-                            className={classNames(cls.item, { [popupCls.active]: active })}
+                            className={classNames(cls.item, {
+                                [popupCls.active]: active,
+                            })}
                             onClick={item?.onClick}
                             type='button'
                         >

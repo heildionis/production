@@ -10,7 +10,7 @@ interface CountrySelectProps {
     className?: string;
     value?: string;
     onChange?: (country: Country) => void;
-    readonly?: boolean
+    readonly?: boolean;
 }
 
 const options = [
@@ -21,28 +21,28 @@ const options = [
     { value: Country.Ukraine, content: Country.Ukraine },
 ];
 
-export const CountrySelect: FC<CountrySelectProps> = memo((props: CountrySelectProps) => {
-    const {
-        className,
-        value,
-        onChange,
-        readonly,
-    } = props;
-    const { t } = useTranslation('select');
+export const CountrySelect: FC<CountrySelectProps> = memo(
+    (props: CountrySelectProps) => {
+        const { className, value, onChange, readonly } = props;
+        const { t } = useTranslation('select');
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Country);
-    }, [onChange]);
+        const onChangeHandler = useCallback(
+            (value: string) => {
+                onChange?.(value as Country);
+            },
+            [onChange]
+        );
 
-    return (
-        <Listbox
-            className={classNames('', {}, [className])}
-            label={t('Укажите страну')}
-            items={options}
-            value={value}
-            onChange={onChangeHandler}
-            readonly={readonly}
-            direction='top left'
-        />
-    );
-});
+        return (
+            <Listbox
+                className={classNames('', {}, [className])}
+                label={t('Укажите страну')}
+                items={options}
+                value={value}
+                onChange={onChangeHandler}
+                readonly={readonly}
+                direction='top left'
+            />
+        );
+    }
+);

@@ -9,7 +9,7 @@ import { Modal } from '@/shared/ui/Modal';
 interface LoginModalProps {
     className?: string;
     isOpen: boolean;
-    onClose: () => void
+    onClose: () => void;
 }
 
 export const LoginModal: FC<LoginModalProps> = (props) => {

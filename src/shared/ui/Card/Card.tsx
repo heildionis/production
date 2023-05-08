@@ -26,7 +26,13 @@ export const Card: FC<CardProps> = (props: CardProps) => {
     } = props;
 
     return (
-        <div className={classNames(cls.Card, { [cls.fullWidth]: fullWidth }, [className, cls[theme]])} {...otherProps}>
+        <div
+            className={classNames(cls.Card, { [cls.fullWidth]: fullWidth }, [
+                className,
+                cls[theme],
+            ])}
+            {...otherProps}
+        >
             {children}
         </div>
     );

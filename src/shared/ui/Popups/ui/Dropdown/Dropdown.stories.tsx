@@ -8,7 +8,11 @@ export default {
     title: 'shared/Popups/Dropdown',
     component: Dropdown,
     decorators: [
-        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
     ],
     args: {
         trigger: <Button>Open</Button>,
@@ -26,7 +30,9 @@ export default {
     },
 } as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+    <Dropdown {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

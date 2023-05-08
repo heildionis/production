@@ -24,5 +24,6 @@ export const counterSlice = buildSlice({
     },
 });
 
-export const { actions: counterAtions, useActions: useCounterActions } = counterSlice;
+export const { actions: counterAtions, useActions: useCounterActions } =
+    counterSlice;
 export const { reducer: counterReducer } = counterSlice;

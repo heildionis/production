@@ -27,7 +27,7 @@ interface ProfileCardProps {
     onChangeUsername?: (value?: string) => void;
     onChangeAvatar?: (value?: string) => void;
     onChangeCurrency?: (currency: Currency) => void;
-    onChangeCountry?: (country: Country) => void
+    onChangeCountry?: (country: Country) => void;
 }
 
 export const ProfileCard: FC<ProfileCardProps> = (props) => {
@@ -50,7 +50,15 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
 
     if (isLoading) {
         return (
-            <HStack justify='center' fullWidth className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+            <HStack
+                justify='center'
+                fullWidth
+                className={classNames(
+                    cls.ProfileCard,
+                    { [cls.loading]: true },
+                    [className]
+                )}
+            >
                 <Loader />
             </HStack>
         );
@@ -58,7 +66,14 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
 
     if (error) {
         return (
-            <HStack justify='center' fullWidth className={classNames(cls.ProfileCard, { }, [className, cls.error])}>
+            <HStack
+                justify='center'
+                fullWidth
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
+            >
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Произошла ошибка при загрузке профиля')}
@@ -74,9 +89,17 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
     };
 
     return (
-        <VStack gap='16' className={classNames(cls.ProfileCard, mods, [className])} fullWidth>
+        <VStack
+            gap='16'
+            className={classNames(cls.ProfileCard, mods, [className])}
+            fullWidth
+        >
             {data?.avatar && (
-                <HStack justify='center' fullWidth className={cls.avatarWrapper}>
+                <HStack
+                    justify='center'
+                    fullWidth
+                    className={cls.avatarWrapper}
+                >
                     <Avatar size={250} src={data?.avatar} alt='' />
                 </HStack>
             )}

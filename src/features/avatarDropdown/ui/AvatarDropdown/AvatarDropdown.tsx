@@ -4,7 +4,12 @@ import { useSelector } from 'react-redux';
 
 import cls from './AvatarDropdown.module.scss';
 
-import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
+import {
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
+} from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/constants/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -38,11 +43,15 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             direction='bottom left'
             className={classNames(cls.AvatarDropdown, {}, [className])}
             items={[
-                ...(isAdminPanelAvailable ? [{ content: t('Админка'), href: getRouteAdmin() }] : []),
+                ...(isAdminPanelAvailable
+                    ? [{ content: t('Админка'), href: getRouteAdmin() }]
+                    : []),
                 { content: t('Профиль'), href: getRouteProfile(authData.id) },
                 { content: t('Выйти'), onClick: onLogout },
             ]}
-            trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
+            trigger={
+                <Avatar fallbackInverted size={30} src={authData.avatar} />
+            }
         />
     );
 });

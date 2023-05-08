@@ -19,10 +19,8 @@ interface ArticleListProps {
     target?: HTMLAttributeAnchorTarget;
 }
 
-const getSkeletons = (view: ArticleView) => (
-    new Array(
-        view === ArticleView.SMALL ? 15 : 3,
-    )
+const getSkeletons = (view: ArticleView) =>
+    new Array(view === ArticleView.SMALL ? 15 : 3)
         .fill(0)
         .map((item, index) => (
             <ArticleListItemSkeleton
@@ -30,41 +28,54 @@ const getSkeletons = (view: ArticleView) => (
                 view={view}
                 className={cls.card}
             />
-        ))
-);
+        ));
 
-export const ArticleList: FC<ArticleListProps> = memo((props: ArticleListProps) => {
-    const {
-        className,
-        articles,
-        view = ArticleView.SMALL,
-        isLoading,
-        target,
-    } = props;
-    const { t } = useTranslation();
+export const ArticleList: FC<ArticleListProps> = memo(
+    (props: ArticleListProps) => {
+        const {
+            className,
+            articles,
+            view = ArticleView.SMALL,
+            isLoading,
+            target,
+        } = props;
+        const { t } = useTranslation();
 
-    const renderArticle = (article: Article) => (
-        <ArticleListItem
-            article={article}
-            view={view}
-            className={cls.card}
-            key={article.id}
-            target={target}
-        />
-    );
+        const renderArticle = (article: Article) => (
+            <ArticleListItem
+                article={article}
+                view={view}
+                className={cls.card}
+                key={article.id}
+                target={target}
+            />
+        );
 
-    if (!isLoading && !articles.length) {
+        if (!isLoading && !articles.length) {
+            return (
+                <div
+                    className={classNames(cls.ArticleList, {}, [
+                        className,
+                        cls[view],
+                    ])}
+                    data-testid='ArticleList'
+                >
+                    <Text size={TextSize.L} title={t('Статьи не найдены')} />
+                </div>
+            );
+        }
+
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])} data-testid='ArticleList'>
-                <Text size={TextSize.L} title={t('Статьи не найдены')} />
+            <div
+                className={classNames(cls.ArticleList, {}, [
+                    className,
+                    cls[view],
+                ])}
+                data-testid='ArticleList'
+            >
+                {articles.length > 0 ? articles.map(renderArticle) : null}
+                {isLoading && getSkeletons(view)}
             </div>
         );
     }
-
-    return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])} data-testid='ArticleList'>
-            {articles.length > 0 ? articles.map(renderArticle) : null}
-            {isLoading && getSkeletons(view)}
-        </div>
-    );
-});
+);

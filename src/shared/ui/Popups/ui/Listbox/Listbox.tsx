@@ -48,16 +48,19 @@ export const Listbox: FC<ListBoxProps> = memo((props: ListBoxProps) => {
             <HeadlessListbox
                 disabled={readonly}
                 as='div'
-                className={classNames(cls.Listbox, {}, [className, popupCls.popup])}
+                className={classNames(cls.Listbox, {}, [
+                    className,
+                    popupCls.popup,
+                ])}
                 value={value}
                 onChange={onChange}
             >
                 <HeadlessListbox.Button className={cls.trigger}>
-                    <Button disabled={readonly}>
-                        {value ?? defaultValue}
-                    </Button>
+                    <Button disabled={readonly}>{value ?? defaultValue}</Button>
                 </HeadlessListbox.Button>
-                <HeadlessListbox.Options className={classNames(cls.options, {}, optionClasses)}>
+                <HeadlessListbox.Options
+                    className={classNames(cls.options, {}, optionClasses)}
+                >
                     {items?.map((item) => (
                         <HeadlessListbox.Option
                             key={item.value}

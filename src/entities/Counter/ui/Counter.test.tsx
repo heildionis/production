@@ -6,14 +6,14 @@ import { Counter } from './Counter';
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 
 describe('Counter Test', () => {
-    test(('To Be Rendered'), () => {
+    test('To Be Rendered', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
         expect(screen.getByTestId('value-title')).toHaveTextContent('10');
     });
 
-    test(('increment'), async () => {
+    test('increment', async () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
@@ -21,7 +21,7 @@ describe('Counter Test', () => {
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
     });
 
-    test(('decrement'), async () => {
+    test('decrement', async () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });

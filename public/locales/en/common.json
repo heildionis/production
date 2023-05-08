@@ -1,44 +1,44 @@
 {
-  "Главная страница": "Main page",
-  "Тестовый пример": "Test example",
-  "Перевод": "Translate",
-  "Язык": "English",
-  "NotFound": "Page not found",
-  "Unhappend Error": "An unexpected error has occurred",
-  "Update page": "Update page",
-  "Главная": "Home",
-  "О сайте": "About us",
-  "Свернуть": "Wrap",
-  "Короткий язык": "en",
-  "Войти": "Log in",
-  "Введите пароль": "Enter password",
-  "Введите username": "Enter username",
-  "Форма авторизации": "Auth form",
-  "Некорректное имя пользователя или пароль": "Incorrect username or password",
-  "Выйти": "Log out",
-  "Профиль": "Profile",
-  "Копировать": "Copy",
-  "Комментарии отсутсвуют": "No comments",
-  "Введите текст комментария": "Enter comment text",
-  "Отправить": "Send",
-  "Cтатьи": "Articles",
-  "Читать далее": {
-    "": {
-      "": {
-        "": "Read more..."
-      }
-    }
-  },
-  "Сортировать по": "Sort by",
-  "Поиск": "Search",
-  "По": "By",
-  "убыванию": "descending",
-  "возрастанию": "ascending",
-  "просмотрам": "views",
-  "названию": "title",
-  "дата создания": "date",
-  "Наука": "Science",
-  "Экономика": "Economics",
-  "Все": "All",
-  "Статьи не найдены": "Articles not found"
+    "Главная страница": "Main page",
+    "Тестовый пример": "Test example",
+    "Перевод": "Translate",
+    "Язык": "English",
+    "NotFound": "Page not found",
+    "Unhappend Error": "An unexpected error has occurred",
+    "Update page": "Update page",
+    "Главная": "Home",
+    "О сайте": "About us",
+    "Свернуть": "Wrap",
+    "Короткий язык": "en",
+    "Войти": "Log in",
+    "Введите пароль": "Enter password",
+    "Введите username": "Enter username",
+    "Форма авторизации": "Auth form",
+    "Некорректное имя пользователя или пароль": "Incorrect username or password",
+    "Выйти": "Log out",
+    "Профиль": "Profile",
+    "Копировать": "Copy",
+    "Комментарии отсутсвуют": "No comments",
+    "Введите текст комментария": "Enter comment text",
+    "Отправить": "Send",
+    "Cтатьи": "Articles",
+    "Читать далее": {
+        "": {
+            "": {
+                "": "Read more..."
+            }
+        }
+    },
+    "Сортировать по": "Sort by",
+    "Поиск": "Search",
+    "По": "By",
+    "убыванию": "descending",
+    "возрастанию": "ascending",
+    "просмотрам": "views",
+    "названию": "title",
+    "дата создания": "date",
+    "Наука": "Science",
+    "Экономика": "Economics",
+    "Все": "All",
+    "Статьи не найдены": "Articles not found"
 }

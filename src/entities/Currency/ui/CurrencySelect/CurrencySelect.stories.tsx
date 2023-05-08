@@ -14,7 +14,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof CurrencySelect>;
 
-const Template: ComponentStory<typeof CurrencySelect> = (args) => <CurrencySelect />;
+const Template: ComponentStory<typeof CurrencySelect> = (args) => (
+    <CurrencySelect />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

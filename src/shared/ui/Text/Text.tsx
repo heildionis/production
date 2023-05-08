@@ -7,13 +7,13 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 export enum TextTheme {
     PRIMARY = 'primary',
     INVERTED = 'inverted',
-    ERROR = 'error'
+    ERROR = 'error',
 }
 
 export enum TextAlign {
     RIGHT = 'right',
     LEFT = 'left',
-    CENTER = 'center'
+    CENTER = 'center',
 }
 
 export enum TextSize {
@@ -33,7 +33,7 @@ interface TextProps {
     'data-testid'?: string;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3'
+type HeaderTagType = 'h1' | 'h2' | 'h3';
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     [TextSize.S]: 'h3',
@@ -62,9 +62,12 @@ export const Text: FC<TextProps> = memo((props: TextProps) => {
     ];
 
     return (
-        <div className={classNames(cls.Text, { }, additionals)}>
+        <div className={classNames(cls.Text, {}, additionals)}>
             {title && (
-                <HeaderTag className={cls.title} data-testid={`${dataTestId}.Header`}>
+                <HeaderTag
+                    className={cls.title}
+                    data-testid={`${dataTestId}.Header`}
+                >
                     {title}
                 </HeaderTag>
             )}

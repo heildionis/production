@@ -11,17 +11,19 @@ interface ArticleEditPageProps {
     className?: string;
 }
 
-const ArticleEditPage: FC<ArticleEditPageProps> = memo((props: ArticleEditPageProps) => {
-    const { className } = props;
-    const { t } = useTranslation();
-    const { id } = useParams<{id: string}>();
-    const isEdit = Boolean(id);
+const ArticleEditPage: FC<ArticleEditPageProps> = memo(
+    (props: ArticleEditPageProps) => {
+        const { className } = props;
+        const { t } = useTranslation();
+        const { id } = useParams<{ id: string }>();
+        const isEdit = Boolean(id);
 
-    return (
-        <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
-            {isEdit ? t('Редактировать') + id : t('Создать')}
-        </Page>
-    );
-});
+        return (
+            <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
+                {isEdit ? t('Редактировать') + id : t('Создать')}
+            </Page>
+        );
+    }
+);
 
 export default ArticleEditPage;

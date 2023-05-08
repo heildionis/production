@@ -4,7 +4,12 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+        'prettier',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -13,11 +18,17 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'heildionis-plugin', 'unused-imports'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'heildionis-plugin',
+        'unused-imports',
+    ],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
         'unused-imports/no-unused-imports': 'error',
         'react/jsx-filename-extension': [
             2,
@@ -99,16 +110,25 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.stories.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'heildionis-plugin/layer-imports': [
             'error',
             {
                 alias: '@',
-                ignoreImportPatterns: ['**/StoreProvider', '**/testing', '**/componentRender'],
+                ignoreImportPatterns: [
+                    '**/StoreProvider',
+                    '**/testing',
+                    '**/componentRender',
+                ],
             },
         ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,
