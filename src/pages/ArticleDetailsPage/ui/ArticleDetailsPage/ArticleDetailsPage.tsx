@@ -16,7 +16,8 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { getFeatureFlags } from '@/shared/lib/features';
+import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features';
+import { Card } from '@/shared/ui/Card';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
@@ -49,6 +50,12 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = memo(
             );
         }
 
+        const articleRatingCard = toggleFeatures({
+            name: 'isArticleRatingEnabled',
+            on: () => <ArticleRating articleId={id} />,
+            off: () => <Card>{t('Здесь будет рейтинг')}</Card>,
+        });
+
         return (
             <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
                 <Page
@@ -59,9 +66,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = memo(
                     <VStack gap='16' fullWidth>
                         <ArticleDeatilsPageHeader />
                         <ArticleDetails id={id} />
-                        {isArticleRatingEnabled && (
-                            <ArticleRating articleId={id} />
-                        )}
+                        {articleRatingCard}
                         <ArticleRecommendationsList />
                         <ArticleDetailsComments id={id} />
                     </VStack>
