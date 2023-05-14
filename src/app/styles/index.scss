@@ -1,18 +1,21 @@
-@import "./reset";
-@import "./themes/normal";
-@import "./themes/dark";
-@import "./themes/orange";
-@import "./themes/red";
-@import "./variables/global";
+@import './reset';
+@import './themes/normal';
+@import './themes/dark';
+@import './themes/orange';
+@import './variables/global';
 
-body {
+.app {
+    min-height: 100vh;
+    background: var(--bg-color);
     font: var(--font-m);
     color: var(--primary-color);
 }
 
-.app {
-    background: var(--bg-color);
+.app_redesigned {
+    background: var(--bg-redesigned);
     min-height: 100vh;
+    font: var(--font-m-redesigned);
+    color: var(--text-redesigned);
 }
 
 .content-page {
@@ -20,8 +23,8 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: 12px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
 }
 
 *::-webkit-scrollbar-track {
