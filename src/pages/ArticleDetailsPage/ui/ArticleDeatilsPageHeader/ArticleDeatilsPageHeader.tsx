@@ -11,8 +11,8 @@ import {
     getRouteArticles,
 } from '@/shared/constants/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { HStack } from '@/shared/ui/Stack';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 
 interface ArticleDeatilsPageHeaderProps {
     className?: string;

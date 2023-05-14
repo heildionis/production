@@ -8,7 +8,7 @@ import cls from './SidebarItem.module.scss';
 
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLink } from '@/shared/ui/AppLink';
+import { AppLink } from '@/shared/ui/deprecated/AppLink';
 
 interface SidebarItemProps {
     item: SidebarItemType;
