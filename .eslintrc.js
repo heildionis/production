@@ -86,6 +86,7 @@ module.exports = {
                     'gap',
                     'role',
                     'border',
+                    'feature',
                 ],
             },
         ],
@@ -93,7 +94,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 130,
+                code: 140,
             },
         ],
         'jsx-quotes': ['error', 'prefer-single'],

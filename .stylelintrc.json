@@ -4,6 +4,8 @@
         "indentation": [4],
         "selector-class-pattern": null,
         "no-missing-end-of-source-newline": null,
-        "block-no-empty": null
+        "block-no-empty": null,
+        "string-quotes": "single",
+        "max-line-length": 1000
     }
 }
