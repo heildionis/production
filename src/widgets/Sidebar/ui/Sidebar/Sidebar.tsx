@@ -10,9 +10,9 @@ import { LangSwitcher } from '@/features/LangSwitcher';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { AppLogo } from '@/shared/ui/deprecated/AppLogo';
 import { Button, ButtonTheme, ButtonSize } from '@/shared/ui/deprecated/Button';
 import { VStack } from '@/shared/ui/deprecated/Stack';
+import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
 
 interface SidebarProps {
     className?: string;
@@ -38,6 +38,15 @@ export const Sidebar: FC<SidebarProps> = memo(({ className }: SidebarProps) => {
                     )}
                 >
                     <AppLogo className={cls.appLogo} />
+                    <VStack role='navigation' gap='8' className={cls.items}>
+                        {sidebarItemsList.map((item) => (
+                            <SidebarItem
+                                key={item.path}
+                                item={item}
+                                collapsed={collapsed}
+                            />
+                        ))}
+                    </VStack>
                 </aside>
             }
             off={

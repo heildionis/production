@@ -31,7 +31,8 @@
         "generate:slice:docs": "npx ts-node ./scripts/generate-readme-for-slice.ts",
         "generate:ui:api": "npx ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
         "generate:import:update": "npx ts-node ./scripts/refactoring/updateImports.ts",
-        "postinstall": "rimraf ./node-modules/.cahce"
+        "postinstall": "rimraf ./node-modules/.cahce",
+        "remove-feature": "ts-node ./scripts/remove-feature.ts"
     },
     "keywords": [],
     "author": "",

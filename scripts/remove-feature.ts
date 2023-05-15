@@ -20,8 +20,8 @@ if (featureState !== 'on' && featureState !== 'off') {
 
 const project = new Project();
 
-project.addSourceFilesAtPaths('src/**/*.ts');
-project.addSourceFilesAtPaths('src/**/*.tsx');
+project.addSourceFilesAtPaths('src/**/Navbar.ts');
+project.addSourceFilesAtPaths('src/**/Navbar.tsx');
 
 const files = project.getSourceFiles();
 

@@ -2,10 +2,7 @@ import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-import {
-    getAddCommentFormError,
-    getAddCommentFormText,
-} from '../../model/selectors/addCommentFormSelectors';
+import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
 import {
     addCommentFormActions,
     addCommentFormReducer,
@@ -38,7 +35,6 @@ const AddCommentForm: FC<AddCommentFormProps> = memo(
         const { t } = useTranslation();
         const dispatch = useAppDispatch();
         const text = useSelector(getAddCommentFormText);
-        const error = useSelector(getAddCommentFormError);
 
         const onCommentTextChange = useCallback(
             (value: string) => {

@@ -699,6 +699,12 @@
       "userId": "1",
       "text": "SADAS",
       "id": "54Q-WVa"
+    },
+    {
+      "articleId": "14",
+      "userId": "2",
+      "text": "asdas",
+      "id": "hDT0aRD"
     }
   ],
   "users": [
@@ -819,6 +825,12 @@
       "rate": 3,
       "feedback": "sad",
       "id": "UcUtYLG"
+    },
+    {
+      "userId": "2",
+      "articleId": "14",
+      "rate": 4,
+      "id": "oUNL_f4"
     }
   ],
   "profile-ratings": [
